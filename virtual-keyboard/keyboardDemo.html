@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <title>Virtual Keyboard Demo</title>
+<head>
+  <script type="module">
+    import {Keyboard} from './keyboard.js'
+
+    let main = document.getElementById("main")
+    let callback = function(event) {
+      console.log(event.target.innerHTML)
+    };
+
+    let keyboard = new Keyboard(callback)
+    main.appendChild(keyboard.keyboard)
+  </script>
+</head>
+<body>
+  <div id="main"></div>
+</body>
+</html>
